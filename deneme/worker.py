@@ -217,10 +217,10 @@ while True:
         channel.start_consuming()
 
     except pika.exceptions.AMQPConnectionError as e:
-        logging.warning(f"Connection failed: {e}. Retrying in 5 seconds...")
+        logging.warning(f"Connection failed: {e}. Retrying in 5 seconds")
         time.sleep(5)
     except KeyboardInterrupt:
-        logging.info("Shutting down worker gracefully...")
+        logging.info("Shutting down worker")
         try:
             channel.stop_consuming()
             connection.close()

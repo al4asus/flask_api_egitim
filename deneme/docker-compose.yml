@@ -1,0 +1,91 @@
+version: "3.9"
+
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: deneme_rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    networks:
+      - backend
+
+  db:
+    image: postgres
+    container_name: deneme_db
+    restart: always
+    environment:
+      POSTGRES_DB: jobs
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - backend
+
+  flask_api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    container_name: deneme_flask_api
+    ports:
+      - "5000:5000"
+    depends_on:
+      - rabbitmq
+      - db
+    environment:
+      RABBITMQ_HOST: rabbitmq
+      RABBITMQ_USER: guest
+      RABBITMQ_PASS: guest
+      DB_HOST: db
+      DB_NAME: jobs
+      DB_USER: user
+      DB_PASS: password
+    networks:
+      - backend
+
+  worker:
+    build:
+      context: .
+      dockerfile: Dockerfile.worker
+    container_name: deneme_worker
+    depends_on:
+      - rabbitmq
+      - db
+    environment:
+      RABBITMQ_HOST: rabbitmq
+      RABBITMQ_USER: guest
+      RABBITMQ_PASS: guest
+      DB_HOST: db
+      DB_NAME: jobs
+      DB_USER: user
+      DB_PASS: password
+    networks:
+      - backend
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.frontend
+    container_name: deneme_frontend
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend:/app
+    depends_on:
+      - flask_api
+    networks:
+      - backend
+
+volumes:
+  pgdata:
+
+networks:
+  backend:
+    driver: bridge
+

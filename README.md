@@ -15,7 +15,7 @@ It leverages **Flask API** to handle requests and **RabbitMQ** for managing asyn
 ## Project Structure
 
 ```
-project_name/
+deneme/
 │
 ├── docker-compose.yml       # Docker Compose configuration file to spin up services
 ├── Dockerfile.api           # Dockerfile for the Flask API service
@@ -48,19 +48,21 @@ Follow the steps below to get the project up and running.
 
 ### 1. Clone the repository:
 ```
-git clone https://github.com/yourusername/project-name.git
-cd project-name
+git clone https://github.com/yourusername/flask_api_egitim.git
+cd flask_api_egitim
 ```
 
 ### 2. Build and start the Docker containers:
 ```
 docker-compose up --build
-This will build and start the containers for the Flask API, Worker, RabbitMQ, PostgreSQL, and Frontend.
 ```
+This will build and start the containers for the Flask API, Worker, RabbitMQ, PostgreSQL, and Frontend.
+
 
 ### 3. Install dependencies:
-```
+
 For the API and Worker, dependencies are listed in the requirements.txt file. They will be installed automatically by Docker. If you want to install them manually, use the following:
+```
 pip install -r requirements.txt
 ```
 

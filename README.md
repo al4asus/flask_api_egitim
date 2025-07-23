@@ -47,15 +47,83 @@ The application requires several environment variables to be set up for proper c
 Follow the steps below to get the project up and running.
 
 ### 1. Clone the repository:
-```bash
+```
 git clone https://github.com/yourusername/project-name.git
 cd project-name
+```
 
-2. Build and start the Docker containers:
+### 2. Build and start the Docker containers:
+```
 docker-compose up --build
 This will build and start the containers for the Flask API, Worker, RabbitMQ, PostgreSQL, and Frontend.
+```
 
-3. Install dependencies:
+### 3. Install dependencies:
+```
 For the API and Worker, dependencies are listed in the requirements.txt file. They will be installed automatically by Docker. If you want to install them manually, use the following:
 pip install -r requirements.txt
+```
+
+### 4. Set up Environment Variables:
+Make sure to set up the following environment variables in your local machine or within the docker-compose.yml file:
+
+RABBITMQ_HOST
+
+RABBITMQ_USER
+
+RABBITMQ_PASS
+
+DB_HOST
+
+DB_NAME
+
+DB_USER
+
+DB_PASS
+
+## Usage
+Once the containers are up and running, you can use the system through the provided REST API. The following endpoints are available:
+
+/jobs/run (POST): To submit a job, pass the job type and necessary parameters as JSON in the body of the request. Available job types are:
+
+ping
+
+port_scan
+
+whois_lookup
+
+os_detection
+
+katana
+
+http_headers
+
+command
+
+/results/latest (GET): To fetch the latest result for a job, pass the job_id as a query parameter. Example:
+
+```
+GET /results/latest?job_id=<job_id>
+```
+/results (GET): To get the latest 10 results, use the /results endpoint. Example:
+```
+GET /results
+```
+
+## Technologies Used
+- **Flask**: A micro web framework used for creating the API.
+
+- **RabbitMQ**: A message broker used for managing and distributing jobs.
+
+- **PostgreSQL**: A relational database used to store job results.
+
+- **Docker**: Used for containerization and deployment of services.
+
+- **React**: A JavaScript library for building the frontend.
+
+- **Nmap**: Used for OS detection.
+
+- **Katana**: A tool for URL scraping.
+
+- **Requests**: Used for making HTTP requests (for HTTP header fetching).
 

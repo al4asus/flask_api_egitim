@@ -15,7 +15,7 @@ It leverages **Flask API** to handle requests and **RabbitMQ** for managing asyn
 ## Project Structure
 
 ```
-deneme/
+flask_api_egitim/deneme/
 │
 ├── docker-compose.yml       # Docker Compose configuration file to spin up services
 ├── Dockerfile.api           # Dockerfile for the Flask API service

@@ -14,7 +14,8 @@ It leverages **Flask API** to handle requests and **RabbitMQ** for managing asyn
 
 ## Project Structure
 
-/project_name
+```
+project_name/
 │
 ├── docker-compose.yml       # Docker Compose configuration file to spin up services
 ├── Dockerfile.api           # Dockerfile for the Flask API service
@@ -29,7 +30,7 @@ It leverages **Flask API** to handle requests and **RabbitMQ** for managing asyn
 ├── worker.py               # Python worker handling the job execution
 ├── main.py                 # Flask API handling incoming requests
 └── vite.config.js          # Vite configuration for frontend development
-
+```
 
 ## Environment Variables
 The application requires several environment variables to be set up for proper configuration:

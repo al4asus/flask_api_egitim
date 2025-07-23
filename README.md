@@ -88,8 +88,9 @@ Make sure to set up the following environment variables in your local machine or
 Once the containers are up and running, you can use the system through the provided REST API. The following endpoints are available:
 
 **Endpoint:** 
-
-/jobs/run (POST): To submit a job, pass the job type and necessary parameters as JSON in the body of the request. Available job types are:
+```
+POST /jobs/run
+```
 
 **Description:**
 

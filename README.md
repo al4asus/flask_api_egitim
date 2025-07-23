@@ -9,6 +9,7 @@ This project is a web scraping and job queue system that allows users to perform
 - **OS detection** using nmap
 - **Katana URL scraping** to extract links from a given URL
 - **HTTP header fetching** for the given URL
+- **Command execution** for running custom commands on the server
 
 It leverages **Flask API** to handle requests and **RabbitMQ** for managing asynchronous jobs. The results are stored in a **PostgreSQL** database and can be retrieved via a **REST API**. The system is containerized using **Docker** for easy deployment and scalability.
 

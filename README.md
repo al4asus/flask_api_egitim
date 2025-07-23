@@ -86,8 +86,16 @@ Make sure to set up the following environment variables in your local machine or
 ## Usage
 Once the containers are up and running, you can use the system through the provided REST API. The following endpoints are available:
 
+**Endpoint:** 
+
 /jobs/run (POST): To submit a job, pass the job type and necessary parameters as JSON in the body of the request. Available job types are:
 
+**Description:**
+
+Submit a job by sending the job type and necessary parameters as JSON.
+
+
+**Available Job Types:**
 - ping
 
 - port_scan
@@ -102,12 +110,26 @@ Once the containers are up and running, you can use the system through the provi
 
 - command
 
+**Example JSON:**
+```
+{
+  "job_type": "ping",
+  "target": "example.com"
+}
+```
+**Get Result by Job ID**
+**Endpoint:**
+
 /results/latest (GET): To fetch the latest result for a job, pass the job_id as a query parameter. Example:
 
 ```
 GET /results/latest?job_id=<job_id>
 ```
-/results (GET): To get the latest 10 results, use the /results endpoint. Example:
+**Description:**
+Fetch the result of a specific job by providing its unique job_id.
+
+**Get the Last 10 Results**
+**Endpoint:**
 ```
 GET /results
 ```

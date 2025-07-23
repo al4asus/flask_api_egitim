@@ -67,19 +67,19 @@ pip install -r requirements.txt
 ### 4. Set up Environment Variables:
 Make sure to set up the following environment variables in your local machine or within the docker-compose.yml file:
 
-RABBITMQ_HOST
+- RABBITMQ_HOST
 
-RABBITMQ_USER
+- RABBITMQ_USER
 
-RABBITMQ_PASS
+- RABBITMQ_PASS
 
-DB_HOST
+- DB_HOST
 
-DB_NAME
+- DB_NAME
 
-DB_USER
+- DB_USER
 
-DB_PASS
+- DB_PASS
 
 ## Usage
 Once the containers are up and running, you can use the system through the provided REST API. The following endpoints are available:

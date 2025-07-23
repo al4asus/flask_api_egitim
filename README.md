@@ -86,19 +86,19 @@ Once the containers are up and running, you can use the system through the provi
 
 /jobs/run (POST): To submit a job, pass the job type and necessary parameters as JSON in the body of the request. Available job types are:
 
-ping
+- ping
 
-port_scan
+- port_scan
 
-whois_lookup
+- whois_lookup
 
-os_detection
+- os_detection
 
-katana
+- katana
 
-http_headers
+- http_headers
 
-command
+- command
 
 /results/latest (GET): To fetch the latest result for a job, pass the job_id as a query parameter. Example:
 

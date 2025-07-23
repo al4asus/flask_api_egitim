@@ -132,6 +132,20 @@ Returns the result of a specific job using its ID.
 GET /results
 ```
 
+### Frontend Integration
+Once the backend is running, the results will be automatically fetched and displayed on the React frontend. You can:
+
+#### Submit a Job via the UI:
+
+- Use the frontend UI to select a job type and enter the required target or parameters.
+- Jobs will be sent to the backend via the /jobs/run endpoint.
+
+#### View Job Results:
+
+- The frontend will automatically display the job results as they are completed.
+- Results are fetched from the backend and shown on the frontend in real-time.
+
+
 ## Technologies Used
 - **Flask**: A micro web framework used for creating the API.
 

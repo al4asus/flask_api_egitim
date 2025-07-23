@@ -145,6 +145,16 @@ Once the backend is running, the results will be automatically fetched and displ
 - The frontend will automatically display the job results as they are completed.
 - Results are fetched from the backend and shown on the frontend in real-time.
 
+### Example Flow
+1. The user opens the React frontend at `http://localhost:5173`.
+2. The user selects a job type (e.g., `ping`, `port_scan`, `katana`, etc.) from the UI.
+3. The user enters the required input (such as a domain, IP address, or command).
+4. The frontend sends a POST request to the `/jobs/run` endpoint with the job data.
+5. The backend receives the job, sends it to RabbitMQ.
+6. The worker service picks up the job, processes it (e.g., runs `nmap`, `ping`, etc.).
+7. Once the job is done, the worker saves the result to the PostgreSQL database.
+8. The frontend polls the backend (e.g., `/results/latest?job_id=...`) to fetch the result.
+9. The result is displayed on the UI in real-time, with a download button and status.
 
 ## Technologies Used
 - **Flask**: A micro web framework used for creating the API.

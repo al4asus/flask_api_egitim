@@ -121,14 +121,10 @@ Submit a job by sending the job type and necessary parameters as JSON.
 ```
 **Get Result by Job ID**
 **Endpoint:**
-
-/results/latest (GET): To fetch the latest result for a job, pass the job_id as a query parameter. Example:
-
 ```
 GET /results/latest?job_id=<job_id>
 ```
-**Description:**
-Fetch the result of a specific job by providing its unique job_id.
+Returns the result of a specific job using its ID.
 
 **Get the Last 10 Results**
 **Endpoint:**

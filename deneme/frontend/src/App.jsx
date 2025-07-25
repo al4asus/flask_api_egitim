@@ -9,7 +9,7 @@ import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
 
 const theme = createTheme({
   palette: {
-    mode: 'light', // dark yapabilirsin: 'dark'
+    mode: 'light',
     primary: {
       main: '#1976d2',
     },

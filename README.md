@@ -167,6 +167,8 @@ Once the backend is running, the results will be automatically fetched and displ
 
 - **React**: A JavaScript library for building the frontend.
 
+- **Material UI (MUI)**: A modern React UI framework used for building interactive and responsive components in the frontend
+
 - **Nmap**: Used for OS detection.
 
 - **Katana**: A tool for URL scraping.

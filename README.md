@@ -13,6 +13,25 @@ This project is a web scraping and job queue system that allows users to perform
 
 It leverages **Flask API** to handle requests and **RabbitMQ** for managing asynchronous jobs. The results are stored in a **PostgreSQL** database and can be retrieved via a **REST API**. The system is containerized using **Docker** for easy deployment and scalability.
 
+## Technologies Used
+- **Flask**: A micro web framework used for creating the API.
+
+- **RabbitMQ**: A message broker used for managing and distributing jobs.
+
+- **PostgreSQL**: A relational database used to store job results.
+
+- **Docker**: Used for containerization and deployment of services.
+
+- **React**: A JavaScript library for building the frontend.
+
+- **Material UI (MUI)**: A modern React UI framework used for building interactive and responsive components in the frontend
+
+- **Nmap**: Used for OS detection.
+
+- **Katana**: A tool for URL scraping.
+
+- **Requests**: Used for making HTTP requests (for HTTP header fetching).
+
 ## Project Structure
 
 ```
@@ -155,23 +174,3 @@ Once the backend is running, the results will be automatically fetched and displ
 7. Once the job is done, the worker saves the result to the PostgreSQL database.
 8. The frontend polls the backend (e.g., `/results/latest?job_id=...`) to fetch the result.
 9. The result is displayed on the UI in real-time, with a download button and status.
-
-## Technologies Used
-- **Flask**: A micro web framework used for creating the API.
-
-- **RabbitMQ**: A message broker used for managing and distributing jobs.
-
-- **PostgreSQL**: A relational database used to store job results.
-
-- **Docker**: Used for containerization and deployment of services.
-
-- **React**: A JavaScript library for building the frontend.
-
-- **Material UI (MUI)**: A modern React UI framework used for building interactive and responsive components in the frontend
-
-- **Nmap**: Used for OS detection.
-
-- **Katana**: A tool for URL scraping.
-
-- **Requests**: Used for making HTTP requests (for HTTP header fetching).
-

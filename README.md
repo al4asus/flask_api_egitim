@@ -1,5 +1,9 @@
 # Flask API Job Queue System
 
+<p align="center">
+  <img src="assets/banner.png" alt="Cybersecurity Job Queue System Banner" width="100%" />
+</p>
+
 ## Project Description
 This project is a web scraping and job queue system that allows users to perform various network-related operations, such as:
 

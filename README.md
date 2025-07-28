@@ -1,9 +1,9 @@
 # Flask API Job Queue System
 
 <p align="center">
-  <img src="assets/img1.png" alt="banner" width="30%" style="margin: 5px;" />
-  <img src="assets/img2.png" alt="scan_os_detection" width="30%" style="margin: 5px;" />
-  <img src="assets/img3.png" alt="scan_ping" width="30%" style="margin: 5px;" />
+  <img src="assets/banner.png" alt="banner" width="30%" />
+  <img src="assets/scan_os_detection.png" alt="scan_os_detection" width="30%" />
+  <img src="assets/scan_ping.png" alt="scan_ping" width="30%" />
 </p>
 
 ## Project Description

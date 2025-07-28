@@ -1,7 +1,9 @@
 # Flask API Job Queue System
 
 <p align="center">
-  <img src="assets/banner.png" alt="Cybersecurity Job Queue System Banner" width="80%" />
+  <img src="assets/img1.png" alt="Ping" width="30%" style="margin: 5px;" />
+  <img src="assets/img2.png" alt="OS Detection" width="30%" style="margin: 5px;" />
+  <img src="assets/img3.png" alt="Port Scan" width="30%" style="margin: 5px;" />
 </p>
 
 ## Project Description

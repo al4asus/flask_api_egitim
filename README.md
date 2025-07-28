@@ -85,6 +85,12 @@ For the API and Worker, dependencies are listed in the requirements.txt file. Th
 ```
 pip install -r requirements.txt
 ```
+#### 3.1. Install Frontend Particles Dependencies
+To install the necessary dependencies for the animated background, you must run the following command in the terminal inside the frontend folder:
+```
+cd deneme/frontend
+npm install @tsparticles/react @tsparticles/slim
+```
 
 ### 4. Set up Environment Variables:
 Make sure to set up the following environment variables in your local machine or within the docker-compose.yml file:
@@ -102,6 +108,23 @@ Make sure to set up the following environment variables in your local machine or
 - DB_USER
 
 - DB_PASS
+
+### 5. Create the results Table in PostgreSQL
+
+Once your containers are running, the system expects a table named results in your PostgreSQL database to store job results. Run the following commands at terminal to manually create the table:
+```
+docker exec -it deneme_db psql -U user -d jobs
+```
+Then, inside the PostgreSQL prompt, execute:
+```
+CREATE TABLE results (
+    id SERIAL PRIMARY KEY,
+    job_type TEXT,
+    result TEXT,
+    job_id TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+```
 
 ## Usage
 Once the containers are up and running, you can use the system through the provided REST API. The following endpoints are available:

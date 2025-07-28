@@ -69,7 +69,7 @@ Follow the steps below to get the project up and running.
 ### 1. Clone the repository:
 ```
 git clone https://github.com/yourusername/flask_api_egitim.git
-cd flask_api_egitim
+cd flask_api_egitim/deneme
 ```
 
 ### 2. Build and start the Docker containers:

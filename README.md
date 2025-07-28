@@ -1,7 +1,7 @@
 # Flask API Job Queue System
 
 <p align="center">
-  <img src="assets/banner.png" alt="Cybersecurity Job Queue System Banner" width="100%" />
+  <img src="assets/banner.png" alt="Cybersecurity Job Queue System Banner" width="80%" />
 </p>
 
 ## Project Description

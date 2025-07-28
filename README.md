@@ -71,28 +71,20 @@ Follow the steps below to get the project up and running.
 git clone https://github.com/yourusername/flask_api_egitim.git
 cd flask_api_egitim/deneme
 ```
-
-### 2. Build and start the Docker containers:
-```
-docker-compose up --build
-```
-This will build and start the containers for the Flask API, Worker, RabbitMQ, PostgreSQL, and Frontend.
-
-
-### 3. Install dependencies:
+### 2. Install dependencies:
 
 For the API and Worker, dependencies are listed in the requirements.txt file. They will be installed automatically by Docker. If you want to install them manually, use the following:
 ```
 pip install -r requirements.txt
 ```
-#### 3.1. Install Frontend Particles Dependencies
+#### 2.1. Install Frontend Particles Dependencies
 To install the necessary dependencies for the animated background, you must run the following command in the terminal inside the frontend folder:
 ```
 cd deneme/frontend
 npm install @tsparticles/react @tsparticles/slim
 ```
 
-### 4. Set up Environment Variables:
+### 3. Set up Environment Variables:
 Make sure to set up the following environment variables in your local machine or within the docker-compose.yml file:
 
 - RABBITMQ_HOST
@@ -108,6 +100,14 @@ Make sure to set up the following environment variables in your local machine or
 - DB_USER
 
 - DB_PASS
+
+### 4. Build and start the Docker containers:
+```
+cd deneme
+docker-compose up --build
+```
+This will build and start the containers for the Flask API, Worker, RabbitMQ, PostgreSQL, and Frontend.
+
 
 ### 5. Create the results Table in PostgreSQL
 

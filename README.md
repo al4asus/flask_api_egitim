@@ -1,4 +1,4 @@
-# Flask API Job Queue System
+# Cybersecurity Analysis Panel
 
 <p align="center">
   <img src="assets/banner.png" alt="banner" width="30%" />
